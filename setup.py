@@ -65,7 +65,8 @@ from setuptools import setup
 from torch.utils.cpp_extension import BuildExtension, CppExtension, CUDAExtension
 
 if platform == "win32":
-    raise ImportError("Windows is currently not supported.")
+    # raise ImportError("Windows is currently not supported.")
+  print("IGNOR: Windows is currently not supported.")
 elif platform == "darwin":
     # Set the distutils to use clang instead of g++ for valid std
     if "CC" not in os.environ:
